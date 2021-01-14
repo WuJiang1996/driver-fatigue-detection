@@ -17,9 +17,6 @@ drowsiness detection
 - imutils (pip install imutils)
    - We’ll also need the imutils package, my series of computer vision and image processing functions to make working with OpenCV easier.
 
--  pyglet (pip install pyglet)
-    - we'll also need pyglet  playing sound such as .mp3 , .wav ...  
-
 -  dlib
    - To detect and localize facial landmarks we’ll need the dlib library
 
