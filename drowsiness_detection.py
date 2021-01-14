@@ -10,6 +10,7 @@ import dlib
 import cv2
 
 
+
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
 	# vertical eye landmarks (x, y)-coordinates
