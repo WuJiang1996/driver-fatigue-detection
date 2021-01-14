@@ -10,7 +10,6 @@ import dlib
 import cv2
 
 
-
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
 	# vertical eye landmarks (x, y)-coordinates
@@ -31,7 +30,7 @@ def eye_aspect_ratio(eye):
 ap = argparse.ArgumentParser()
 
 ap.add_argument("-w", "--webcam", type=int, default=0,
-	help="index of webcam on system")
+    help="index of webcam on system")
 args = vars(ap.parse_args())
  
 # define two constants, one for the eye aspect ratio to indicate
