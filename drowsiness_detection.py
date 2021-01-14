@@ -26,22 +26,7 @@ def eye_aspect_ratio(eye):
 	# return the eye aspect ratio
 	return ear
  
-# construct the argument parse and parse the arguments
-ap = argparse.ArgumentParser()
-
-ap.add_argument("-w", "--webcam", type=int, default=0,
-    help="index of webcam on system")
-args = vars(ap.parse_args())
  
-# define two constants, one for the eye aspect ratio to indicate
-# blink and then a second constant for the number of consecutive
-# frames the eye must be below the threshold for to set off the
-# alarm
-EYE_AR_THRESH = 0.25
-EYE_AR_CONSEC_FRAMES = 48
-
-# initialize the frame counter as well as a boolean used to
-COUNTER = 0
 
 # initialize dlib's face detector (HOG-based) and then create
 # the facial landmark predictor
@@ -131,3 +116,24 @@ while True:
 cv2.destroyAllWindows()
 vs.stop()
 
+
+# construct the argument parse and parse the arguments
+ap = argparse.ArgumentParser()
+
+ap.add_argument("-w", "--webcam", type=int, default=0,
+    help="index of webcam on system")
+args = vars(ap.parse_args())
+
+if __name__=="__main__":
+
+	# define two constants, one for the eye aspect ratio to indicate
+	# blink and then a second constant for the number of consecutive
+	# frames the eye must be below the threshold for to set off the
+	# alarm
+	EYE_AR_THRESH = 0.25
+	EYE_AR_CONSEC_FRAMES = 48
+
+	# initialize the frame counter as well as a boolean used to
+	COUNTER = 0
+	
+	start()
