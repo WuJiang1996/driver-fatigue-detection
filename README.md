@@ -59,7 +59,7 @@ Build and install the Python extensions:
 
 ```bash
 cd ..
-python3 setup.py install --yes USE_AVX_INSTRUCTIONS --no DLIB_USE_CUDA
+python3 setup.py install
 ```
 
 At this point, you should be able to run `python3` and type `import dlib` successfully.
