@@ -1,21 +1,14 @@
-
 from scipy.spatial import distance as dist
 from imutils.video import VideoStream
 from imutils import face_utils
 from threading import Thread
 import numpy as np
-#import pyglet
 import argparse
 import imutils
 import time
 import dlib
 import cv2
 
-#def sound_alarm(path):
-#	# play an alarm sound
-#	music = pyglet.resource.media('alarm.wav')
-#        music.play()
-#        pyglet.app.run()
 
 def eye_aspect_ratio(eye):
 	# compute the euclidean distances between the two sets of
