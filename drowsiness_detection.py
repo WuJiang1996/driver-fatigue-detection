@@ -41,9 +41,7 @@ EYE_AR_THRESH = 0.25
 EYE_AR_CONSEC_FRAMES = 48
 
 # initialize the frame counter as well as a boolean used to
-# indicate if the alarm is going off
 COUNTER = 0
-ALARM_ON = False
 
 # initialize dlib's face detector (HOG-based) and then create
 # the facial landmark predictor
@@ -64,8 +62,7 @@ time.sleep(1.0)
 # loop over frames from the video stream
 while True:
 	# grab the frame from the threaded video file stream, resize
-	# it, and convert it to grayscale
-	# channels)
+	# it, and convert it to grayscale channels)
 	frame = vs.read()
 	frame = imutils.resize(frame, width=450)
 	gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -106,10 +103,6 @@ while True:
 			# if the eyes were closed for a sufficient number of
 			# then sound the alarm
 			if COUNTER >= EYE_AR_CONSEC_FRAMES:
-				# if the alarm is not on, turn it on
-				if not ALARM_ON:
-					ALARM_ON = True
-
 				# draw an alarm on the frame
 				cv2.putText(frame, "DROWSINESS ALERT!", (10, 30),
 					cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
@@ -137,3 +130,4 @@ while True:
 # do a bit of cleanup
 cv2.destroyAllWindows()
 vs.stop()
+
