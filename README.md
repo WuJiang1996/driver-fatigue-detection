@@ -49,7 +49,9 @@ Build the main dlib library:
 
 ```bash
 cd dlib
-mkdir build; cd build; cmake .. -DDLIB_USE_CUDA=0 -DUSE_AVX_INSTRUCTIONS=1; cmake --build .
+mkdir build 
+cd build;
+cmake .. -DDLIB_USE_CUDA=0 -DUSE_AVX_INSTRUCTIONS=1;cmake --build .
 ```
 
 Build and install the Python extensions:
